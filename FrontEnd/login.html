@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Connexion - Sophie Bluel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Sophie Bluel <span>ARCHITECTE D'INTÉRIEUR</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">projets</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li id="menu-login" class="actif"><a href="login.html">login</a></li>
+          <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-connexion">
+      <h2>Log In</h2>
+
+      <form id="formulaire-connexion" class="formulaire-connexion">
+        <label for="champ-email">E-mail</label>
+        <input
+          type="email"
+          id="champ-email"
+          placeholder="sophie.bluel@test.tld"
+        />
+
+        <label for="champ-motdepasse">Mot de passe</label>
+        <input type="password" id="champ-motdepasse" />
+
+        <button id="bouton-connexion" type="submit">Se connecter</button>
+
+        <a href="#" id="motdepasse-oublie" class="motdepasse-oublie">
+          Mot de passe oublié
+        </a>
+
+        <p id="erreur-connexion" class="erreur-connexion"></p>
+      </form>
+    </main>
+
+    <footer>
+      <nav>
+        <ul>
+          <li>Mentions Légales</li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="login.js"></script>
+  </body>
+</html>

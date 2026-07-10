@@ -1,188 +1,699 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* -------------------- RESET + CONFIG DE BASE -------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+html,
 body {
-	line-height: 1;
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/** end reset css**/
+
 body {
-	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
-	font-size: 14px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
 }
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* -------------------- HEADER -------------------- */
 header {
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0
-}
-section {
-	margin: 50px 0
-}
-
-h1{
-	display: flex;
-	flex-direction: column;
-	font-family: 'Syne';
-	font-size: 22px;
-	font-weight: 800;
-	color: #B1663C
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px 118px 0px 120px;
+  padding: 0 2%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-h1 > span {
-	font-family: 'Work Sans';
-	font-size:10px;
-	letter-spacing: 0.1em;
-;
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne", sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
 }
 
-h2{
-	font-family: 'Syne';
-	font-weight: 700;
-	font-size: 30px;
-	color: #1D6154
+h1 span {
+  font-family: "Work Sans";
+  font-size: 9.25px;
+  letter-spacing: 0.1em;
+  margin-top: 2px;
 }
+
+nav {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
 nav ul {
-	display: flex;
-	align-items: center;
-	list-style-type: none;
-
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
+
 nav li {
-	padding: 0 10px;
-	font-size: 1.2em;
+  font-size: 1.2em;
+  cursor: pointer;
+  padding-right: 6px;
 }
 
-li:hover {
-	color: #B1663C;
+nav li img {
+  width: 20px;
+  padding-top: 5px;
 }
+
+nav li:hover {
+  color: #b1663c;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+nav ul li a:hover {
+  color: #1d6154;
+}
+nav ul li.actif a {
+  font-weight: 700;
+  color: black;
+}
+
+/* -------------------- SECTION INTRODUCTION -------------------- */
 #introduction {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 110px;
+  margin-left: 205px;
+  margin-right: 55px;
+  flex-wrap: wrap;
 }
+
 #introduction figure {
-	flex: 1
+  flex: 0.45;
+  max-width: 50%;
 }
+
 #introduction img {
-	display: block;
-	margin: auto;
-	width: 80%;
+  width: 98%;
+  height: auto;
+  object-fit: cover;
 }
 
 #introduction article {
-	flex: 1
+  flex: 1;
+  max-width: 430px;
+  padding-left: 20px;
+  padding-top: 6px;
 }
+
 #introduction h2 {
-	margin-bottom: 1em;
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1d6154;
+  margin-top: 0;
+  margin-bottom: 13px;
 }
 
 #introduction p {
-	margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  color: #333;
+  line-height: 1.2;
 }
+/* -------------------- PORTFOLIO -------------------- */
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+  color: #1d6154;
+}
+
 #portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
-}
-.gallery {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+  text-align: center;
+  font-family: "Syne", sans-serif;
+  margin-bottom: 1em;
 }
 
-.gallery img {
-	width: 100%;
-
+.entete-portfolio h2 {
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1d6154;
 }
+
+/* -------------------- MODIFIER -------------------- */
+.entete-portfolio {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.bouton-modifier {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.bouton-modifier i {
+  font-size: 16px;
+}
+
+/* -------------------- GALERIE -------------------- */
+#galerie {
+  width: 66%;
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+#galerie figure {
+  margin: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+#galerie img {
+  width: 100%;
+  height: 405px;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#galerie figcaption {
+  display: flex;
+  font-family: "Work Sans", sans-serif;
+  justify-content: flex-start;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* -------------------- FILTRES -------------------- */
+#filtres {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+#filtres button {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #1d6154;
+  background: white;
+  border: 2px solid #1d6154;
+  border-radius: 25px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  min-width: 100px;
+}
+
+#filtres button:hover,
+#filtres button.actif {
+  background: #1d6154;
+  color: white;
+}
+/* -------------------- CONTACT -------------------- */
 #contact {
-	width: 50%;
-margin: auto;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 52px;
 }
-#contact > * {
-	text-align: center;
 
+#contact h2 {
+  margin-bottom: 5px;
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1d6154;
 }
-#contact h2{
-	margin-bottom: 20px;
+
+#contact p {
+  margin-top: 0;
+  color: #333;
+  font-size: 16px;
 }
+
 #contact form {
-	text-align: left;
-	margin-top:30px;
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  width: 53%;
+  text-align: left;
+  margin: 5px auto 0;
 }
 
-#contact input {
-	height: 50px;
-	font-size: 1.2em;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-}
 #contact label {
-	margin: 2em 0 1em 0;
+  margin-top: 19px;
+  font-size: 14px;
+  color: #333;
 }
+
+#contact input:not([type="submit"]),
 #contact textarea {
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  height: 55px;
+  border: none;
+  padding: 10px;
+  font-size: 1.1em;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
-input[type="submit"]{
-	font-family: 'Syne';
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
-	margin : 2em auto ;
-	width: 180px;
-	text-align: center;
-	border-radius: 60px ;
+#contact textarea {
+  min-height: 180px;
+  resize: vertical;
 }
 
-footer nav ul {
-	display: flex;
-	justify-content: flex-end;
-	margin: 2em
+#formulaire-contact button {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  background-color: #1d6154;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 60px;
+  cursor: pointer;
+  display: block;
+  margin: 25px auto;
+  transition: background-color 0.2s ease;
+  width: fit-content;
 }
 
+#formulaire-contact button:hover {
+  background-color: #2e7c6b;
+}
+
+/* -------------------- FOOTER -------------------- */
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 100px;
+  padding-top: 25px;
+  height: 80px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+  color: #333;
+}
+/* -------------------- MODALE -------------------- */
+#fond-modale {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+#modale {
+  position: fixed;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.contenu-modale {
+  background: white;
+  padding: 40px 45px;
+  width: 640px;
+  border-radius: 10px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.contenu-modale h3 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 35px;
+  margin-bottom: 10px;
+}
+
+#fermer-modale {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+#fermer-modale:hover {
+  opacity: 0.6;
+}
+
+.cache {
+  display: none;
+}
+
+/* -------------------- GALERIE MODALE -------------------- */
+#galerie-modale {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  align-items: start;
+  gap: 6px;
+  width: 80%;
+  margin: 0 auto 40px auto;
+  transform: translateX(-25px);
+}
+
+.miniature-modale {
+  position: relative;
+  width: calc(100% - 2px);
+  height: 125px;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.miniature-modale img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* -------------------- BOUTON SUPPRIMER -------------------- */
+.bouton-supprimer {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: black;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.bouton-supprimer i {
+  color: white;
+  font-size: 12px;
+}
+
+/* -------------------- SÉPARATEUR -------------------- */
+.separateur-modale {
+  width: 80%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 40px auto 25px auto;
+}
+
+/* -------------------- BOUTON AJOUTER PHOTO -------------------- */
+#bouton-ajouter-photo {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 35px;
+  background-color: #1d6154;
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#bouton-ajouter-photo:hover {
+  background-color: #0e4036;
+}
+
+/* -------------------- VUE AJOUT -------------------- */
+#vue-ajout {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#retour-galerie {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  padding: 0;
+}
+
+#retour-galerie:hover {
+  opacity: 0.6;
+}
+
+#retour-galerie i {
+  font-size: 21px;
+}
+
+#formulaire-ajout-photo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.zone-ajout-photo {
+  background-color: #e8f0f6;
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0px;
+  position: relative;
+}
+
+.zone-ajout-photo i {
+  font-size: 50px;
+  color: #a0a0a0;
+}
+
+.zone-ajout-photo p {
+  font-weight: 600;
+  color: #1d6154;
+}
+
+.zone-ajout-photo span {
+  font-size: 13px;
+  color: #666;
+}
+
+#champ-titre {
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+#champ-categorie {
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+#bouton-valider-ajout {
+  background-color: #bfbfbf;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 60px;
+  font-weight: 700;
+  font-family: "Syne", sans-serif;
+  border: none;
+  cursor: pointer;
+}
+#bouton-valider-ajout:disabled {
+  background-color: #bfbfbf;
+  cursor: default;
+  opacity: 0.7;
+}
+#bouton-valider-ajout.actif {
+  background-color: #1d6154;
+}
+
+#bouton-valider-ajout:hover {
+  background-color: #2e7c6b;
+}
+/* -------------------- PAGE CONNEXION -------------------- */
+.page-connexion {
+  max-width: 400px;
+  margin: 131px auto 290px auto;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+.page-connexion h2 {
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #1d6154;
+  margin-bottom: 34px;
+}
+
+.formulaire-connexion {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+  max-width: 380px;
+  margin: auto;
+  text-align: left;
+}
+
+.formulaire-connexion label {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.formulaire-connexion input {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 12px 17px 12px;
+  font-size: 16px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  margin-bottom: 30px;
+}
+
+.formulaire-connexion input:-webkit-autofill {
+  -webkit-box-shadow:
+    0 0 0 1000px #ffffff inset,
+    0px 4px 14px rgba(0, 0, 0, 0.09);
+  box-shadow:
+    0 0 0 1000px #ffffff inset,
+    0px 4px 14px rgba(0, 0, 0, 0.09);
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+.formulaire-connexion button {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 8px;
+  color: white;
+  background-color: #1d6154;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 40px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.2s ease;
+}
+
+.formulaire-connexion button:hover {
+  background-color: #2e7c6b;
+}
+
+.motdepasse-oublie {
+  font-size: 14px;
+  color: #333;
+  text-decoration: underline;
+  margin-top: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.motdepasse-oublie:hover {
+  color: #1d6154;
+}
+
+.erreur-connexion {
+  color: red;
+  margin-top: 10px;
+  text-align: center;
+}
+/* -------------------- BANDEAU EDITION -------------------- */
+.banniere-edition {
+  background-color: #000;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 16px;
+}
+
+.banniere-edition i {
+  font-size: 16px;
+}
+
+/* -------------------- ADMIN CONNECTÉ -------------------- */
+.admin-connecte header {
+  margin-top: 20px;
+}
+
+.admin-connecte #introduction {
+  margin-top: 62px;
+}
+
+.admin-connecte #galerie {
+  margin-top: 62px;
+}
+
+.admin-connecte .entete-portfolio {
+  padding-left: 110px;
+}
