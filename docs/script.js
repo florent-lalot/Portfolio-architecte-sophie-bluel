@@ -5,11 +5,6 @@
 // On récupère le token pour savoir si l'utilisateur est connecté
 const token = localStorage.getItem("token");
 
-/**
- * Fonction exécutée UNE SEULE FOIS.
- * Elle active le mode admin sans jamais être rappelée,
- * ce qui évite tout "flash" du bandeau lors des mises à jour du DOM.
- */
 function activerModeAdminUneFois() {
   document.body.classList.add("admin-connecte");
 
@@ -358,6 +353,7 @@ formulaireAjout.addEventListener("submit", async (e) => {
   formData.append("title", champTitre.value);
   formData.append("category", champCategorie.value);
 
+  // 3.4 On rafraîchit uniquement la galerie principale
   const reponse = await fetch("http://localhost:5678/api/works", {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
@@ -365,7 +361,6 @@ formulaireAjout.addEventListener("submit", async (e) => {
   });
 
   if (reponse.ok) {
-    // 3.4 On rafraîchit uniquement la galerie principale
     const travaux = await recupererTravaux();
     afficherGalerie(travaux);
 
